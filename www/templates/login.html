@@ -1,0 +1,22 @@
+
+<ion-view view-title="Login">
+    <ion-content style="background: url(img/fundo_app.jpg) center; background-size: cover;" class="hider">
+        <div class="hero no-header flat">
+            <div class="content">
+                <div class="app-icon afana"><img src="img/app_logo.png" alt=""></div>
+            </div>
+        </div>
+          <div class="padding">        
+        <div class="list">
+        <label class="item item-input item-floating-label">
+        <span class="input-label">Email</span> <input type="text" placeholder="Email" ng-model="user.email"> </label>
+        <label class="item item-input item-floating-label">
+        <span class="input-label">Senha</span> <input type="password" placeholder="Senha" ng-model="user.password"> </label>
+        </div>
+     
+            <button ng-click="registro_simples(user)" class="button button-full button-assertive-900 myred ink">Entrar ou Cadastrar</button>
+           <!-- <button ui-sref="app.calendario" class="button button-full button-assertive ink">Login</button> -->
+                     <!--   <button ng-click= "faceLogin()" class="button button-full button-border icon-left ion-social-facebook button-positive-900">Faça o seu Login pelo Facebook</button>-->
+        </div>
+    </ion-content>     
+</ion-view>

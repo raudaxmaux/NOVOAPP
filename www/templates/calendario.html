@@ -1,0 +1,16 @@
+<ion-view view-title="Calendário" align-title="center" class="flat">
+<div class="bar bar-subheader dark-bg barbicha">
+        	<h1 class="title">Calendário</h1>
+</div>
+    <ion-content ng-class="{expanded:$scope.isExpanded}" class="rebaixado">
+
+<my-calendar display="dateValue" dateformat="'dd-MMM-yyyy'"></my-calendar>
+				<div class="list">
+				  <div class="item">
+					{{dateValue}}
+				  </div>
+				</div>
+				<div>
+				</div>   
+	</ion-content>
+</ion-view>

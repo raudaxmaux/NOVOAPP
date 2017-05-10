@@ -1,0 +1,32 @@
+   <ion-modal-view>
+  <ion-header-bar align-title="center" class="flat">
+    <h4 class="title texto-branco">Modificar Item na Lista</h4>
+  </ion-header-bar>
+<ion-content class="has-header topito pane" ng-class="{expanded:$scope.isExpanded}">
+<div class="list spaced">
+      <h4 class="big_red">Modifique o Item</h4>
+</div>
+
+
+  <label class="item item-input item-stacked-label pitch">
+    <input type="text" ng-model="modifItem.item">
+  </label>
+  <label class="item item-input item-stacked-label pitch">
+    <ion-checkbox class="item-checkbox-left " style="border:none;" ng-checked="modifItem.done" ng-click="updateClicked()">Status</ion-checkbox>
+  </label>
+
+  <div class="item">
+     <div class="buttons text-right">
+         <button class="button button-assertive myred menasfuente" ng-click="removefromUpdate(2)">
+            Apagar
+        </button>
+         <button class="button button-assertive myred" ng-click="cancelTask(2)">
+            <i class="icon icon ion-close"> Sair</i>
+        </button>                   
+        <button class="button button-positive-900" ng-click="updateTask(2)">
+            <i class="icon icon ion-checkmark"> Ok</i>
+        </button>
+    </div>
+  </div>
+      </ion-content>
+   </ion-modal-view>

@@ -1,0 +1,35 @@
+   <ion-modal-view>
+  <ion-header-bar align-title="center" class="flat">
+    <h4 class="title texto-branco">Detalhes do Fornecedor</h4>
+  </ion-header-bar>
+<ion-content class="has-header topito pane" ng-class="{expanded:$scope.isExpanded}">
+<div class="list">
+  <div class="item">
+    <span class="big_red">Nome:  </span><strong>{{modifItem.nome}}</strong>
+  </div>
+  <div class="item">
+    <span class="big_red">Telefone:  </span><strong>{{modifItem.tel}}</strong>
+  </div>
+  <div class="item">
+    <span class="big_red">Email:  </span><strong>{{modifItem.email}}</strong>
+  </div>
+  <div class="item">
+    <span class="big_red">Tipo:  </span><strong>{{modifItem.tipo}}</strong>
+  </div>
+</div>
+
+<div class="item">
+</div>  
+
+  <div class="item">
+     <div class="buttons text-right">
+         <button class="button button-assertive-900" ng-click="removefromUpdate(2)">
+            Apagar
+        </button>               
+        <button class="button button-positive-900" ng-click="cancelTask(2)">
+            <i class="icon icon ion-checkmark"></i>
+        </button>
+    </div>
+  </div>
+      </ion-content>
+   </ion-modal-view>

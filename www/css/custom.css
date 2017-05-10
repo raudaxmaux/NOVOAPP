@@ -1,0 +1,143 @@
+
+body{
+    font-family: RobotoDraft;
+    font-weight: 400;
+}
+
+.bar-header{
+	background-color: #5e0309 ! important;
+}
+
+.menu .bar.bar-header.expanded {
+    transition: none  ! important;
+}
+
+.dark-bg .expanded .maior .vermelhao .bar .bar-header{
+	background-color: #5e0309 ! important;	
+}
+
+.bar{
+	background-image: none;
+}
+
+.balanced{
+	color: #a49f29 !important;
+}
+
+.assertive{
+	color: #820d15 !important;
+}
+
+.topito{
+	padding-top: 54px;
+}
+
+.spaced{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.big_red{
+	color: #820d15;
+	font-weight:900;
+	text-shadow: none;
+}
+
+.texto-branco{
+	color: #fff !important;
+}
+
+.item-stacked-label input{
+    background-color: transparent;
+}
+
+.pitch{
+	border-bottom: solid 1px #555 !important;
+}
+
+.input-label {
+max-width: 100% !important;
+width: 100% !important;
+}
+
+
+.item-input{
+  display: block !important;
+}
+
+.input-label {
+max-width: 100% !important;
+width: 100% !important;
+}
+
+
+.item-select select {
+position: relative !important;
+    background-color: transparent;
+}
+
+.centos{
+	width: 100% !important;
+}
+
+.assent{
+	display:block;
+	padding-left: 0px;
+}
+
+.mini-label{
+	padding-bottom: 0px !important;
+	min-height: 24px !important;
+}
+
+.myred{
+	background-color: #5e0309 ! important;	
+}
+
+.top-minify{
+	padding-top: 0pc !important;
+}
+
+.all-minify{
+	padding: 0px;
+}
+
+.item-select:after {
+top: 60% !important;
+}
+
+.morna{
+	color: #A9A9A9 !important;
+}
+
+.afana{
+	width: 100% !important;
+	height: 220px;
+}
+
+.menasfuente{
+	text-transform: none;
+}
+
+.maspaca{
+	padding-right: 5px !important;
+	width: 80%;
+	display: inline !important;
+}
+
+.spec_avatar{
+  margin-top: 40px;
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+}
+
+.spec_but{
+  margin-top: 35px;
+  margin-left: 150px;
+    display: inline-block;
+}
+
+.just_red{
+	color: #820d15 !important;
+}

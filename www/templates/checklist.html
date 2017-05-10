@@ -1,0 +1,23 @@
+<ion-view>
+<div class="bar bar-subheader dark-bg barbicha">
+        	<h1 class="title">Checklist</h1>
+        	<h3 class="title desprega">{{nome}}</h3>
+      </div> 
+    <ion-content ng-class="{expanded:$scope.isExpanded}" class="rebaixado">
+	    <div class="list list-inset" style="padding-top: 10px;">
+		  <label class="item item-input">
+		    <i class="icon ion-search placeholder-icon"></i>
+		    <input type="text" ng-model="search.item" placeholder="Procure...">
+		  </label>
+		</div>    
+    	<ion-list>
+    		<ion-checkbox class="item-checkbox-right dark" ng-class="{complete: list.done == true}" class="item-text-wrap morna" ng-repeat="list in listCheck | filter:search" ng-checked="list.done" ng-click="doneClicked($index, list)""><strong>{{list.item}}</strong></ion-checkbox>
+
+     </label>
+    	  </ion-item>
+    	</ion-list>
+    </ion-content>
+     <button id="fab-profile" class="button button-fab button-fab-bottom-right button-energized-900 myred abaixafab" ng-click="showTaskPrompt()">
+      <i class="icon ion-plus"></i>
+      </button>   
+</ion-view>

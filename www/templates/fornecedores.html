@@ -1,0 +1,23 @@
+<ion-view>
+<div class="bar bar-subheader dark-bg barbicha">
+        	<h1 class="title">Fornecedores</h1>
+
+        	<h3 class="title desprega">{{nome}}</h3>
+      </div> 
+    <ion-content ng-class="{expanded:$scope.isExpanded, 'has-header-fab-left': hasHeaderFabLeft}" class="rebaixado">
+    <ion-list>
+      <ion-item class="item-icon-left item-text-wrap item-button-right" ng-repeat="crew in listCheck">
+        <i class="icon ion-person"></i>
+       <span class="maior"><strong>{{crew.nome}}</strong></span><br>
+        {{crew.tipo}}
+        <div class="buttons">
+       			<button class="button-small button-balanced flat ink" ng-click="editTask($index, crew)">
+                        + INFO
+            </button></div>       
+      </ion-item>    
+    </ion-list>
+    </ion-content>
+    <button id="fab-profile" class="button button-fab button-fab-top-right button-assertive-900 myred abaixafab" ng-click="showTaskPrompt()">
+      <i class="icon ion-person-add"></i>
+      </button>
+</ion-view>

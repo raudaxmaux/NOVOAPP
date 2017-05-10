@@ -1,0 +1,38 @@
+   <ion-modal-view>
+  <ion-header-bar align-title="center" class="flat">
+    <h4 class="title texto-branco">Modificar Item na Lista</h4>
+  </ion-header-bar>
+<ion-content class="has-header topito pane" ng-class="{expanded:$scope.isExpanded}">
+<div class="list spaced">
+      <h4 class="big_red">Modifique o Item</h4>
+</div>
+
+
+  <label class="item item-input item-stacked-label pitch">
+    <input type="text" ng-model="modifItem.item">
+  </label>
+      <div class="item item-input-inset pitch top-minify">
+        <label class="item item-input-wrapper all-minify">   
+        <input type="text" ng-model="horeador(itemTime)">
+        </label>
+        <button class="button button-small button-energized-900 myred ink" ng-click="normHour()"><i class="ion-android-time"></i></button>
+     </div> 
+  <label class="item item-input item-stacked-label pitch">
+    <ion-checkbox class="item-checkbox-left " style="border:none;" ng-checked="modifItem.done" ng-click="updateClicked()">Status</ion-checkbox>
+  </label>
+
+  <div class="item">
+     <div class="buttons text-right">
+         <button class="button button-small button-assertive myred menasfuente" ng-click="removefromUpdate(2)">
+            Apagar
+        </button>
+         <button class="button button-small button-assertive myred" ng-click="cancelTask(2)">
+            <i class="icon icon ion-close menasfuente"> Sair</i>
+        </button>                   
+        <button class="button button-small button-positive-900" ng-click="updateTask(2)">
+            <i class="icon icon ion-checkmark menasfuente"> Ok</i>
+        </button>
+    </div>
+  </div>
+      </ion-content>
+   </ion-modal-view>

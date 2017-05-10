@@ -1,0 +1,49 @@
+<ion-view view-title="Evento" align-title="center" class="flat">
+<div class="bar bar-subheader dark-bg barbicha">
+        <h1 class="title">{{nome}}</h1>
+</div> 
+    <ion-content ng-class="{expanded:$scope.isExpanded}" class="rebaixado bar-header">
+    <div class="row eventTab tutti">
+      <div class="col col-50 claro ink">
+        <div class="tabtext" ui-sref="app.afazeres">
+          <div class="icon"><i class="ion-compose"></i></div>
+          <h3>To Do</h3>
+        </div>
+      </div>
+      <div class="col col-50 escuro ink">
+        <div class="tabtext" ui-sref="app.listadecompras">
+          <div class="icon"><i class="ion-bag"></i></div>
+          <h3>Compras</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row eventTab tutti">
+      <div class="col col-50 escuro ink">
+        <div class="tabtext" ui-sref="app.checklist">
+          <div class="icon"><i class="ion-clipboard"></i></div>
+          <h3>Checklist</h3>
+        </div>
+      </div>
+      <div class="col col-50 claro ink">
+        <div class="tabtext" ui-sref="app.cronograma">
+          <div class="icon"><i class="ion-android-calendar"></i></div>
+          <h3>Cronograma</h3>
+        </div>
+      </div>
+    </div>
+    <div class="row eventTab tutti">
+      <div class="col col-50 claro ink">
+        <div class="tabtext claro" ui-sref="app.fornecedores">
+          <div class="icon"><i class="ion-wineglass"></i></div>
+          <h3>Fornecedores</h3>
+        </div>
+      </div>
+      <div class="col col-50 escuro ink">
+        <div class="tabtext" ui-sref="app.receitas_despesas">
+          <div class="icon" style="color: #000;"><i class="ion-social-usd"></i></div>
+          <h3>Receitas & Despesas</h3>
+        </div>
+      </div>
+    </div>
+    </ion-content>
+</ion-view>

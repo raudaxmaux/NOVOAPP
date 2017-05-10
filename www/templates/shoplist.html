@@ -1,0 +1,17 @@
+<ion-view>
+<div class="bar bar-subheader dark-bg barbicha">
+        	<h1 class="title">Lista de Compras</h1>
+
+        	<h3 class="title desprega">{{nome}}</h3>
+      </div> 
+    <ion-content ng-class="{expanded:$scope.isExpanded}" class="rebaixado">
+          <ion-list>
+            <ion-item class="item item-icon-right" ng-repeat="task in listCheck">              <ion-checkbox class="item-checkbox-right " ng-class="{complete: task.done == true}" class="item-text-wrap" style="border:none;" ng-checked="task.done" ng-click="doneClicked($index, task)"><span class="maiorzinho"><strong>{{task.item}}</strong></span></ion-checkbox>
+              <i class="icon ion-edit minus" ng-click="editTask($index, task)" ></i>
+            </ion-item>
+          </ion-list>  
+    </ion-content>
+     <button id="fab-profile" class="button button-fab button-fab-bottom-right button-energized-900 myred abaixafab" ng-click="showTaskPrompt()">
+      <i class="icon ion-plus"></i>
+      </button>    
+</ion-view>

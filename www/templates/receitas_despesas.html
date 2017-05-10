@@ -1,0 +1,41 @@
+<ion-view view-title="Receitas e Despesas">
+<div class="bar bar-subheader dark-bg barbicha">
+        	<h1 class="title">Balanço</h1>
+
+        	<h3 class="title desprega">{{nome}}</h3>
+      </div> 
+    <ion-content ng-class="{expanded:$scope.isExpanded}" class="rebaixado">
+    <div class="englobaReceipt destaquinho positive">
+		<div  class="lined">
+		<h4>Total</h4>
+		</div>
+		<div class="result" pattern="^\d+(?:,\d{3})*\.\d{2}$">{{valorTotal | currency:"R$ "}}</div>
+    </div>
+    <div class="englobaReceipt positive">
+		<div  class="lined">
+		<h4>Receitas</h4>
+		</div>
+		<div class="item item-icon-right itener">{{valorReceitas | currency:"R$ "}}<i class="icon ion-plus-circled minus" ng-click="casaGrana()"></i></div>
+    </div>    
+    <div class="englobaReceipt retiraTop assertive-900">
+		<div  class="lined2">
+		<h4>Despesas</h4>
+		</div>
+		<ion-list>
+		<div class="item item-icon-right itener">{{valorDespesas | currency:"R$ "}}<i class="icon ion-plus-circled minus" ng-click="retiraGrana()"></i></div>
+		</ion-list>
+    </div>
+
+    <div class="englobaReceipt retiraTop assertive-900">
+		<div  class="lined2">
+		<h4>Ultimos Lançamentos</h4>
+		</div>
+    </div>
+	<ion-list>
+	      <ion-item class="item-text-wrap" ng-repeat="budget in listCheck" ng-class="{positive: budget.lancado === 'receita', just_red: budget.lancado === 'despesa'}">
+	       <span class="maior"><strong>{{budget.valor | currency:"R$ "}}</strong></span><br>
+	        {{budget.descrip}}
+	      </ion-item>
+      </ion-list>          
+    </ion-content>
+</ion-view>

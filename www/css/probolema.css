@@ -1,0 +1,67 @@
+/* Empty. Add your own CSS if you like */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+/*font-family: 'Open Sans', sans-serif;*/
+* { margin: 0; padding: 0; outline: none; border: 0px; font-family: 'Open Sans', sans-serif; }
+body { background: #fff; }
+.tabs-top > .tabs, .tabs.tabs-top { top: auto; }
+.has-tabs-top { top: 44px; }
+.bar { height: 54px; }
+.has-header { top: 54px; }
+.bar .title, .platform-android .bar .title { height: 53px; line-height: 54px; text-align: center; }
+.bar.bar-stable, .bar-header { background: #1773ba; border-bottom: 1px solid #0f8dc1; }
+.bar.bar-stable .title, .bar.bar-header h1.title { font-family: 'Open Sans', sans-serif; color: #fff; font-size: 20px; font-weight: 700; }
+.bar.bar-header h1.title { left: 30px; right: 30px; font-family: 'Open Sans', sans-serif; color: #fff; font-size: 20px; font-weight: 300 }
+.loginHome .scroll-content { background: url(../img/bg.jpg) no-repeat center bottom #fff; background-size: 100% auto; }
+.logoLogin { padding: 0 70px; margin: 35% 0 10% 0; text-align: center; }
+.logoLogin img { max-width: 200px; width: 100%; }
+.loginForm { padding: 0 30px; }
+.loginForm .item { border: none; }
+.loginForm label.item { border: none; border: 1px solid #686969; padding: 10px 10px 10px 50px; margin: 0 0 10px; border-radius: 3px; height: 54px; }
+.loginForm label.item select { width: 100%; max-width: 100%; padding: 0 50px; background: none; direction: ltr; }
+.loginForm label.item i { color: #939393; font-size: 24px; }
+.loginForm label.item input { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px; }
+.btnSubmit { border: none; height: 54px; border-radius: 5px; background: #0979be; color: #fff; font-weight: 900 !important; font-size: 16px !important; font-family: 'Open Sans', sans-serif; margin: 0px 0 0 0 !important; text-transform: uppercase; }
+.btnSubmit.activated, .btnSubmit:hover { color: #fff; background: #076dac; }
+.loginForm a.item { text-align: center; margin: 20px 0 0 0; color: #1698ce; font-weight: 600; font-size: 18px; font-family: 'Open Sans', sans-serif; }
+.loginForm a.item.activated { box-shadow: none; background: none; color: #1588b8; }
+.bar-header a.button { background: none; border: none; margin: 0; padding: 0; line-height: 44px; padding: 0 5px; font-size: 20px; color: #a7c1de; }
+.bar-header a.button.activated { color: #fff; box-shadow: none; }
+.bar-header a.button.smallLogo { background: url(../img/smalll-logo.png) no-repeat center center; width: 40px; background-size: 40px auto; }
+.eventForm .scroll-content { background: #e9e9e9; }
+.eventForm .eventTab .col div.tabtext { background: #fff; padding: 20px 0 20px; min-height: 160px; text-align: center; }
+.eventForm .eventTab .col div.tabtext i { font-size: 60px; color: #1773ba; }
+.eventForm .eventTab .col div.tabtext h3 { margin: 25px 0 0 0; padding: 0; font-family: 'Open Sans', sans-serif; text-transform: uppercase; color: #515151; font-size: 18px; }
+.eventForm .eventTab .col div.tabtext.activated, .eventForm .eventTab .col div.tabtext.active { background: #1773ba; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+.eventForm .eventTab .col div.tabtext.activated h3, .eventForm .eventTab .col div.tabtext.activated i, .eventForm .eventTab .col div.tabtext.active h3, .eventForm .eventTab .col div.tabtext.active i { color: #fff; -webkit-transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out; transition: all .3s ease-in-out; }
+.eventForm .btnSubmit { margin: 0 !important; }
+.eventForm { background: #e9e9e9 }
+.eventForm .bar.bar-footer { background: none; border: none; height: 64px; padding: 5px 10px; }
+.eventForm .bar.bar-footer div { display: block; padding: 0; width: 100%; }
+.has-footer { bottom: 64px; }
+.btnVerify { border: none; height: 54px; border-radius: 5px; background: #777; color: #fff; font-weight: 900 !important; font-size: 16px !important; font-family: 'Open Sans', sans-serif; margin: 0px 0 0 0 !important; text-transform: uppercase; }
+.btnVerify.activated, .btnVerify:hover { color: #fff; background: #666; }
+.btnEdit { border: none; height: 54px; border-radius: 5px; background: #ec4109; color: #fff; font-weight: 900 !important; font-size: 16px !important; font-family: 'Open Sans', sans-serif; margin: 0px 0 0 0 !important; text-transform: uppercase; }
+.btnEdit.activated, .btnEdit:hover { color: #fff; background: #d63a07; }
+.detailsForm { padding: 10px; }
+.detailsForm .item { border: none; }
+.detailsForm label.item { border: none; border: none; padding: 10px 10px 10px 50px; margin: 0 0 10px; border-radius: 3px; height: 54px; }
+.detailsForm label.item select { width: 100%; max-width: 100%; padding: 0 50px; background: none; direction: ltr; }
+.detailsForm label.item i { color: #939393; font-size: 24px; }
+.detailsForm label.item input { font-family: 'Open Sans', sans-serif; font-weight: 300; font-size: 16px;flex: 1 1 auto; }
+.detailsForm label.item.textarea { height: auto; line-height: 2em; }
+.detailsForm label.item.textarea i { display: inline-block; }
+.detailsForm label.item textarea { padding: 5px 0; display: inline-block; width: 100%; resize: none; height: 110px;font-size: 16px;font-family: "Open Sans",sans-serif;
+    font-weight: 300; }
+
+.item-icon-left.textarea .icon:before, .item-icon-right.textarea .icon:before { line-height: 1.8em !important; }
+.verifyForm { padding: 10px; }
+.verifyForm .item { text-overflow: inherit; white-space: inherit; text-overflow: inherit; border-color:#eee;color: #555; font-weight: 400; font-size: 14px; font-family: 'Open Sans', sans-serif; line-height:1.7em; padding:20px;  padding-left: 54px; }
+.verifyForm .item i { align-items: center; display: inline; font-size: 24px; height: 100%; color: #939393; top: 20px; }
+
+#location, #dateFromTo, #repeat, #notes{display:none;}
+
+
+@media screen and (min-width: 300px) {
+.eventForm .eventTab .col div.tabtext.dubble { padding-top: 20px; }
+.eventForm .eventTab .col div.tabtext.dubble h3 { margin-top: 10px; }
+}

@@ -1,0 +1,23 @@
+<ion-view view-title="Eventos" align-title="center" class="flat">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+    <div class="row row-center">
+      <div class="col col-center text-center" style="padding-top: 80px;" ng-show="!temEventos">
+        <h2 style="font-weight:900">Sem eventos agendados</h2><br>
+        <h4>Clique no botão abaixo para adicionar um evento.</h4>
+      </div>
+    </div>
+
+  <div>
+    <ion-list>
+      <ion-item class="item-icon-left item-text-wrap ink" ng-repeat="evento in allEvents" ng-click="clicked(evento)">
+        <i class="icon ion-ios-arrow-right"></i>
+       <span class="maior"><strong>{{evento.name}}</strong></span><br>
+        {{evento.evtDay | date:'dd/MM/yyyy'}}
+      </ion-item>
+    </ion-list>
+  </div>
+    </ion-content>
+    <button id="fab-profile" class="button button-fab button-fab-bottom-right button-energized-900 abaixafab myred" ui-sref="app.novoevento">
+      <i class="icon ion-plus"></i>
+      </button>  
+</ion-view>

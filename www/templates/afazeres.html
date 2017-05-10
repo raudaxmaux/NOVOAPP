@@ -1,0 +1,29 @@
+<ion-view>
+<div class="bar bar-subheader dark-bg barbicha">
+        	<h1 class="title">To Do</h1>
+
+        	<h3 class="title desprega">{{nome}}</h3>
+      </div> 
+    <ion-content ng-class="{expanded:$scope.isExpanded}" class="rebaixado">
+    	<ion-list>
+    	  <ion-item class="item-text-wrap item-button-right" ng-repeat="list in listCheck | filter: { done: false }" ng-model="list.done">
+    	<strong>{{list.item}}</strong>
+    	<div class="buttons">
+    		<i class="icon ion-checkmark-circled balanced minus"  ng-click="explainMe(list)"></i>
+    	</div>
+    	  </ion-item>
+    	</ion-list>
+<div class="englobaTime">Completados</div>
+          	<ion-list>
+    	  <ion-item class="item-text-wrap item-button-right " ng-repeat="lista in listCheck | filter: { done: true }" ng-model="lista.done">
+    	<strong>{{lista.item}}</strong>
+    	<div class="buttons">
+    		<i class="icon ion-checkmark-circled stable minus"></i>&nbsp; &nbsp;<i class="icon ion-close-circled assertive minus" ng-click="removeMe(lista)"></i>
+    	</div>
+    	  </ion-item>
+    	</ion-list>
+    </ion-content>
+     <button id="fab-profile" class="button button-fab button-fab-bottom-right button-energized-900 myred abaixafab" ng-click="showTaskPrompt()">
+      <i class="icon ion-plus"></i>
+      </button>   
+</ion-view>

@@ -1,0 +1,65 @@
+   <ion-modal-view>
+  <ion-header-bar align-title="center" class="flat">
+    <h4 class="title texto-branco">Inserir Fornecedor</h4>
+  </ion-header-bar>
+<ion-content class="has-header topito pane" ng-class="{expanded:$scope.isExpanded}">
+<div class="list spaced">
+      <h4 class="big_red">Insira os dados do Fornecedor</h4>
+</div>
+  <label class="item item-input item-stacked-label pitch">
+    <span class="input-label big_red">Nome</span>
+    <input type="text" placeholder="Nome" ng-model="newShop.nome" required>
+  </label>
+  <label class="item item-input item-stacked-label pitch">
+    <span class="input-label big_red">Telefone</span>
+    <input type="tel" placeholder="Telefone" ng-model="newShop.tel">
+  </label>  
+  <label class="item item-input item-stacked-label pitch">
+    <span class="input-label big_red">Email</span>
+    <input type="email" placeholder="Email" ng-model="newShop.email">
+  </label>
+<label class="item item-input item-select pitch">
+    <div class="input-label big_red">
+      Tipo de Fornecedor
+    </div>
+    <select ng-model="mySelect" ng-change="changeEventType(mySelect)">
+      <option>Tipo de Fornecedor</option>
+      <option>Bolo</option>
+      <option>Doce</option>
+      <option>Bebidas</option>
+      <option>Convite</option>
+      <option>Móveis</option>
+      <option>Itens de Decoração</option>
+      <option>Iluminação</option>
+      <option>DJ</option>
+      <option>Foto</option>
+      <option>Filme</option>
+      <option>Lembranças</option>
+      <option>Buffet</option>
+      <option>Animação</option>
+      <option>Atração Musical</option>
+      <option>Vestido</option>
+      <option>Flores</option>
+      <option>Jóias</option>
+      <option>Maquiagem</option>
+      <option>Celebrante</option>
+      <option>Outro</option>
+    </select>
+  </label>
+  <label class="item item-input item-stacked-label pitch" ng-hide="evtPreCad">
+    <span class="input-label big_red">Que outro tipo de Fornecedor?</span>
+    <input type="text" placeholder="Descreva aqui" ng-model="newShop.tipo">
+  </label>
+
+  <div class="item">
+     <div class="buttons text-right">
+         <button class="button button-assertive myred menasfuente" ng-click="cancelTask(1)">
+            <i class="icon icon ion-close"> Sair</i>
+        </button>                   
+        <button class="button button-positive-900" ng-click="saveTask(1)">
+            <i class="icon icon ion-checkmark"> Ok</i>
+        </button>
+    </div>
+  </div>
+      </ion-content>
+   </ion-modal-view>

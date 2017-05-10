@@ -1,0 +1,26 @@
+   <ion-modal-view>
+  <ion-header-bar align-title="center" class="flat">
+    <h4 class="title texto-branco">Inserir Item na Lista de Compras</h4>
+  </ion-header-bar>
+<ion-content class="has-header topito pane" ng-class="{expanded:$scope.isExpanded}">
+<div class="list spaced">
+      <h4 class="big_red">Insira o Item</h4>
+</div>
+
+
+  <label class="item item-input item-stacked-label pitch">
+    <input type="text" placeholder="O que tenho de comprar?" ng-model="newShop.item" require>
+  </label>
+
+  <div class="item">
+     <div class="buttons text-right">
+         <button class="button button-assertive myred menasfuente" ng-click="cancelTask(1)">
+            <i class="icon icon ion-close"> Sair</i>
+        </button>                   
+        <button class="button button-positive-900" ng-click="saveTask(1)">
+            <i class="icon icon ion-checkmark"> Ok</i>
+        </button>
+    </div>
+  </div>
+      </ion-content>
+   </ion-modal-view>

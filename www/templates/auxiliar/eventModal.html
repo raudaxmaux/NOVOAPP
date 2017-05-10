@@ -1,0 +1,82 @@
+<ion-modal-view>
+  <ion-header-bar align-title="center" class="flat">
+    <h4 class="title texto-branco">Criar um novo Evento</h4>
+  </ion-header-bar>
+<ion-content class="has-header topito pane" ng-class="{expanded:$scope.isExpanded}">
+<div class="list spaced">
+      <h4 class="big_red">Informações Gerais</h4>
+</div>
+<form name="marcacao" novalidate>
+<div class="list">
+  <label class="item item-input item-stacked-label pitch">
+    <span class="input-label big_red">Nome do Evento</span>
+    <input type="text" placeholder="Nome do Evento" ng-model="newEvt.name" require>
+  </label>
+  <label class="item item-input item-stacked-label mini-label">
+    <span class="input-label big_red">Data do Evento</span>
+  </label>
+     <div class="item item-input-inset pitch top-minify">
+        <label class="item item-input-wrapper all-minify">   
+        <input type="text" placeholder="Data" ng-model="dataDoEvento | date:'dd/MM/yyyy'" required>
+        </label>
+        <button class="button button-small button-balanced-900 myred ink" ng-click="normDate()"><i class="ion-android-calendar"></i></button>
+     </div>
+  <label class="item item-input item-stacked-label mini-label">
+    <span class="input-label big_red">Horário do Evento</span>
+  </label>
+     <div class="item item-input-inset pitch top-minify">
+        <label class="item item-input-wrapper all-minify">   
+        <input type="text" placeholder="Horário" ng-model="horeador(horaDoEvento)"  required>
+        </label>
+        <button class="button button-small button-energized-900 myred ink" ng-click="normHour()"><i class="ion-android-time" required></i></button>
+     </div>      
+    <label class="item item-input item-stacked-label pitch">
+    <span class="input-label big_red">Local do Evento</span>
+    <input type="text" placeholder="Local do Evento" ng-model="newEvt.place" required>
+  </label> 
+<label class="item item-input item-select pitch">
+    <div class="input-label big_red">
+      Tipo de Evento
+    </div>
+    <select ng-model="mySelect" ng-change="changeEventType(mySelect)">
+      <option>Clique para escolher</option>
+      <option>Casamento</option>
+      <option>Festa Infantil</option>
+      <option>Corporativo</option>
+      <option>Social</option>
+      <option>Outro</option>
+    </select>
+  </label>
+  <label class="item item-input item-stacked-label pitch" ng-hide="evtPreCad">
+    <span class="input-label big_red">Que outro tipo de Evento?</span>
+    <input type="text" placeholder="Descreva aqui" ng-model="newEvt.evtType">
+  </label>
+ <div class="list spaced">
+      <h4 class="big_red">Informações do Cliente</h4>
+</div> 
+  <label class="item item-input item-stacked-label pitch">
+    <span class="input-label big_red">Nome do Cliente</span>
+    <input type="text" placeholder="Nome do Cliente" ng-model="newEvt.client_name" required>
+  </label>
+  <label class="item item-input item-stacked-label pitch">
+    <span class="input-label big_red">Telefone do Cliente</span>
+    <input type="tel" placeholder="Telefone do Cliente" ng-model="newEvt.client_phone">
+  </label>  
+  <label class="item item-input item-stacked-label pitch">
+    <span class="input-label big_red">Email do Cliente</span>
+    <input type="email" placeholder="Email do Cliente" ng-model="newEvt.client_mail">
+  </label>
+  <div class="item">
+     <div class="buttons text-right">
+         <button class="button button-assertive-900" ng-click="closeModal()">
+            <i class="icon icon ion-close"></i>
+        </button>                   
+        <button class="button button-positive-900" ng-click="marcador(newEvt)" ng-disabled="marcacao.$invalid">
+            <i class="icon icon ion-checkmark"></i>
+        </button>
+    </div>
+  </div>
+</div>
+</form>
+</ion-content>
+</ion-modal-view>

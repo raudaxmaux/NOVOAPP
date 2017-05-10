@@ -1,0 +1,29 @@
+   <ion-modal-view>
+  <ion-header-bar align-title="center" class="flat">
+    <h4 class="title texto-branco">Inserir um Novo Valor</h4>
+  </ion-header-bar>
+<ion-content class="has-header topito pane" ng-class="{expanded:$scope.isExpanded}">
+  <label class="item item-input item-stacked-label pitch">
+      <span class="input-label big_red">Valor da Entrada (use ponto antes dos centavos)</span>
+    <input type="number" pattern="^\d+(?:,\d{3})*\.\d{2}$" ng-model="newBudget.valor" >
+  </label>
+<div class="item">
+     Confira: {{newBudget.valor | currency:"R$ "}}   
+</div>
+  <label class="item item-input item-stacked-label pitch">
+    <span class="input-label big_red">Tipo de entrada</span>
+    <input type="text" placeholder="Descreva a entrada" ng-model="newBudget.descrip" >
+  </label>
+
+  <div class="item">
+     <div class="buttons text-right">
+         <button class="button button-assertive myred menasfuente" ng-click="cancelTask(1)">
+            <i class="icon icon ion-close"> Sair</i>
+        </button>                   
+        <button class="button button-positive-900" ng-click="saveTask(1)">
+            <i class="icon icon ion-checkmark"> Ok</i>
+        </button>
+    </div>
+  </div>
+      </ion-content>
+   </ion-modal-view>

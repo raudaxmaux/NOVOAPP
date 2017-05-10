@@ -1,0 +1,308 @@
+/* Empty. Add your own CSS if you like */
+/* General
+==================================*/
+h1 {
+    color: #555;
+    text-shadow: none;
+    font-size: 42px;
+}
+
+.pane{
+    background-color: #e5ded1;
+}
+
+/* Utilities
+==================================*/
+.title-bordered {
+    border-top: solid 2px #bbb;
+    padding-top: 30px;
+}
+
+p {
+    color: #555;
+    margin: 0 0 25px;
+}
+
+.scroll {
+    height: 100%;
+}
+
+
+/* Menu
+==================================*/
+.menu{
+     background-color: #cbbea4 !important;
+}
+
+.menu .bar.bar-header.expanded {
+    transition: all .5s ease-in-out;
+     min-height: 200px;   
+}
+
+.menu-open .bar.bar-header.expanded {
+    background-color: #5e0309;
+    min-height: 200px !important;
+}
+
+.has-expanded-header{
+    top: 200px !important;
+    background-color: #cbbea4 !important;
+}
+
+.menu h2 {
+    bottom: 0;
+    font-size: 18px;
+    left: 16px;
+    position: absolute;
+    padding-bottom: 25px;    
+}
+
+.menu h3 {
+    bottom: 0;
+    font-size: 14px;
+    left: 16px;
+    color: #fff;
+    position: absolute;
+}
+
+.menu .avatar {
+    height: 88px;
+    width: 88px;
+    background-color: #fff !important;
+    margin-top: 25px;
+}
+
+.menu.menu-left * {
+    font-weight: bold;
+}
+
+.menu-open .ion-navicon {
+    transform: rotate(-360deg);
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.menu-open .ion-navicon:before {
+    content: "\f2ca";
+}
+
+.bigger > .list .item{
+    font-size: 16px;
+}
+
+.icon_far{
+    padding-right: 15px;
+}
+
+/* Login
+==================================*/
+.app-icon {
+    background-color: #fff;
+    background: url('../../img/iconevento.png') center;
+    background-size: cover;
+    border-radius: 50%;
+    height: 125px;
+    margin: 0 auto;
+    width: 125px;
+}
+
+.social-login {
+    position: fixed;
+    bottom: 0;
+}
+
+.hider{
+    top: 0px;
+}
+
+.calada{
+    color: #000;
+}
+
+.list .item.item-floating-label, .item-floating-label{
+    border-bottom: solid 1px #555;
+}
+
+input-placeholder{
+    color:    #555;
+}
+
+input::-webkit-input-placeholder {
+color: #555 !important;
+}
+ 
+input:-moz-placeholder { /* Firefox 18- */
+color: #555 !important;  
+}
+ 
+input::-moz-placeholder {  /* Firefox 19+ */
+color: #555 !important;  
+}
+ 
+input:-ms-input-placeholder {  
+color: #555 !important;  
+}
+
+.bar{
+    box-shadow: none !important;
+}
+
+.barbicha{
+    min-height: 80px;
+    background-color: #bfaf8d;
+    color: #5e0309 !important;
+}
+
+.barbicha h1{
+    font-size: 22px !important;
+    text-shadow: none;
+    color: #5e0309 !important;
+    font-weight: bolder !important;
+    padding-top: 12px;
+}
+.barbicha h3{
+     margin-top: 20px;
+    font-size: 14px !important;
+    color: #5e0309 !important;
+    padding-top: 35px;
+}
+
+.desprega{
+    padding-top: 25px;
+    overflow: visible !important;
+}
+
+.abaixafab{
+    margin-top: 30px;
+}
+
+
+/* eventos
+==================================*/
+.maior{
+    font-size: 16px;
+}
+
+.meiaboca{
+    vertical-align: middle;
+    display: inherit;
+    height: 50px
+}
+
+/* the_event
+==================================*/
+
+.tutti{
+    padding: 0px;
+}
+
+.rebaixado{
+    top: 120px;
+}
+
+.pendejo{
+    position: relative;
+  width: 100%;
+}
+
+.pendejo:after {
+  display: block;
+  padding-bottom: 100%;
+}
+.claro{
+    background-color: #5e0309;
+}
+.escuro{
+ background-color: #3a0105;   
+}
+
+.contect {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    font-size: 2em;
+    padding-top: 20%;
+  }
+
+.eventTab .col div.tabtext { padding: 20px 0 20px; min-height: 160px; text-align: center; }
+.eventTab .col div.tabtext i { font-size: 60px; color: #bfaf8d; }
+.eventTab .col div.tabtext h3 { margin: 24px 0 0 0; padding: 0; text-transform: uppercase; color: #bfaf8d; font-size: 18px; }
+
+
+.complete {
+  text-decoration: line-through;
+}
+.minus{
+    font-size: 28px !important;
+}
+.maiorzinho{
+    font-size: 15px !important;
+}
+
+.arreda{
+    padding-right: 30px !important;
+    bottom: 30px !important;
+}
+
+.desce{
+    padding-top: 15px;
+}
+
+.englobaTime{
+    padding: 16px;
+    font-size: 21px;
+    background-color: #cacaca;
+}
+
+.englobaReceipt{
+    padding: 16px;
+    font-size: 21px;
+}
+
+.retiraTop{
+    padding-top: 0px !important;
+}
+
+.destaquinho{
+    background-color: #fff;
+}
+
+.lined h4{
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 0px !important;
+}
+
+.lined{
+    border-bottom: 1px solid #3F51B5;
+    width: 100%;
+    display: inline-block;
+}
+
+.lined2{
+    border-bottom: 1px solid #B71C1C;
+    width: 100%;
+    display: inline-block;
+}
+
+.lined2 h4{
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 0px !important;
+}
+
+.result{
+    padding-bottom: 10px;
+    padding-top: 20px;
+    font-size: 36px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.itener{
+    border: 0;
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+}
