@@ -6,7 +6,7 @@
       "projectTypeName": "com.intel.xdk.projecttype.jsapp",
       "src": "appDesigner",
       "projectGuid": "093974b2-eba3-4a42-94c0-d840844ca468",
-      "lastModifiedDate": 1494432685998,
+      "lastModifiedDate": 1494453101749,
       "creationDate": 1441118193189
     },
     "XDK-app-designer": "true",
@@ -414,10 +414,10 @@
         "excludedLibraries_": "",
         "iosProvs_": [],
         "cordovaCLIVersion_": "6.2.0",
-        "appVersion_": "0.0.16",
+        "appVersion_": "0.0.17",
         "appAuthor_": "Brito Hipermídia",
         "appDescription_": "Aplicativo de controle e planejamento para profissionais de festas e eventos",
-        "appVersionCode_": "7"
+        "appVersionCode_": "8"
       },
       "iOS": {
         "platform_": "ios",

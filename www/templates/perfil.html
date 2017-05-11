@@ -1,10 +1,11 @@
-<ion-view view-title="Perfildo Usuário">
+<ion-view view-title="Perfil do Usuário">
 <div class="bar bar-subheader dark-bg barbicha">
           <h1 class="title">Perfil</h1>
       </div> 
     <ion-content ng-class="{expanded:$scope.isExpanded}" class="rebaixado">
             <form name="perfilForm" novalidate>
               <div class="list">
+                  <!--
                   <label class="item item-input item-stacked-label zero plus">
                     <span class="input-label branca">Avatar</span>
 
@@ -14,19 +15,19 @@
                       <button class="button button-positive ink spec_but" ng-click="swapAvatar()">Trocar Avatar</button>  
                     </div>
                   </label>
-
+                  -->
                   <label class="item item-input item-stacked-label zero">
-                    <span class="input-label branca">Nome</span>
+                    <span class="input-label just_red">Nome</span>
                     <input class="" type="text" ng-model="usuarioMod.displayName" placeholder="Nome">
                   </label>  
                    <label class="item item-input item-stacked-label zero">
-                    <span class="input-label branca">Email</span>
-                    <input type="text" ng-model="usuarioMod.email" placeholder="Email">
+                    <span class="input-label just_red">Email</span>
+                    <input type="text" ng-model="usuarioMod.email">
                   </label>         
 
                   <label class="item item-input item-stacked-label zero">
-                    <span class="input-label branca">Telefone</span>
-                    <input type="tel" ng-model="usuarioMod.telefone">
+                    <span class="input-label just_red">Telefone</span>
+                    <input type="tel" ng-model="usuarioMod.telefone" placeholder="Telefone">
                   </label>                                    
               </div>
                   <button ng-disabled="perfilForm.$invalid" ng-click= "modificar()" class="button button-full button-positive-900 ink" ng-model="LoginBut">Modificar</button>

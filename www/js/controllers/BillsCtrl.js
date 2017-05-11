@@ -84,7 +84,6 @@ function BillsCtrl($scope, $rootScope, ionicToast, $ionicModal, $localStorage, $
     }
 
     $scope.removeMe = function(itim){
-        console.log(itim.item)
         //$scope.listCheck.splice(indi, 1)
         var aquele = $scope.listCheck.indexOf(itim)
         console.log(aquele)

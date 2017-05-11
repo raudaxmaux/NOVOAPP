@@ -6,6 +6,8 @@
     "projectDirectories": {}
   },
   "build-tab": {
-    "selectedTargets": []
+    "selectedTargets": [
+      "CORDOVA_ANDROID"
+    ]
   }
 }

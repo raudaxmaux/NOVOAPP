@@ -3,16 +3,19 @@
 
 angular.module('APPlanner').controller('PerfilCtrl', PerfilCtrl);
 
-function PerfilCtrl($scope, $rootScope, $ionicPlatform, $timeout, $stateParams, ionicMaterialMotion, ionicMaterialInk, $firebaseObject, Utils, FireAuth, $cordovaImagePicker, $cordovaFile, $localStorage){
+function PerfilCtrl($scope, $rootScope, $ionicPlatform, $timeout, $stateParams, ionicMaterialMotion, ionicMaterialInk, $firebaseObject, Utils, FireAuth, $cordovaImagePicker, $cordovaFile, $localStorage, $cordovaNetwork, $location){
 
    $scope.$on("$ionicView.enter", function(event, data){
        // handle event
        $scope.$parent.showHeader();
-       $scope.usuarioAtivo = $rootScope.usuarioAtivo;
+       $scope.usuarioAtivo = $localStorage.usuario;
        $scope.changedPhoto = false;
        $scope.saved = false;
       
     });
+
+   $scope.usuarioMod = $scope.usuarioAtivo;
+   console.log($scope.usuarioMod)
 
     $scope.$on('$ionicView.leave', function(){
         //Utils.alertshow('Saindo', 'Deixando o prédio!.');
@@ -36,9 +39,19 @@ function PerfilCtrl($scope, $rootScope, $ionicPlatform, $timeout, $stateParams, 
     });
 
 
+        document.addEventListener("deviceready", function () {
+         $scope.connec = $cordovaNetwork.isOnline()
+         console.log($scope.connec)
+        });
+
+        if(!$scope.connec){
+          Utils.alertshow("Aviso", "No Momento não há conexão à internet. É preferível que você faça essas modificações online.")
+        }
+
+
       // Set Motion
     $scope.autoFunk = $rootScope.$on("getUserInfo", function(ev){
-      $scope.usuarioMod = $rootScope.usuarioAtivo;
+      $scope.usuarioMod = $scope.usuarioAtivo;
       if ($scope.usuarioMod.photoURL){
         console.log("sim, temos fotos")
         $scope.theFoto = $scope.usuarioMod.photoURL;
@@ -110,6 +123,7 @@ function PerfilCtrl($scope, $rootScope, $ionicPlatform, $timeout, $stateParams, 
 
 
     $scope.modificar = function(){
+        if($scope.connec){
         Utils.show();
         console.log("salvando");
         $scope.saved = true;
@@ -120,6 +134,13 @@ function PerfilCtrl($scope, $rootScope, $ionicPlatform, $timeout, $stateParams, 
         //console.log($scope.usuarioMod);
           FireAuth.updateLogin($scope.usuarioMod);
       }
+      $localStorage.usuario = $scope.usuarioMod;
+      $location.path("app/calendario");
+      Utils.hide();
+    }else{
+          Utils.alertshow("Aviso", "No Momento não há conexão à internet. É preferível que você faça essas modificações online.")
+          Utils.hide();
+    }
     };
 
       $rootScope.$on('updateDone', function (event) {
@@ -135,11 +156,6 @@ function PerfilCtrl($scope, $rootScope, $ionicPlatform, $timeout, $stateParams, 
 
   // Set Ink
   ionicMaterialInk.displayEffect();
-
-
-  $scope.ajuda = function(mensagem){
-    $scope.$parent.toastMess(mensagem);
-  };
 
 }; // fim da função
 })(); // fim do documento
